@@ -10,7 +10,7 @@ def create_interval(section: list[str]) -> Interval:
     return Interval(int(section[0]), int(section[1]), closed='both')
 
 
-def get_overlap(assignment_pairs: list[str]) -> tuple[int]:
+def get_overlap(assignment_pairs: list[str]) -> tuple[int, int]:
     fully_contained = 0
     overlapping = 0
     for assignment_pair in assignment_pairs:

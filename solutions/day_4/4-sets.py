@@ -7,7 +7,7 @@ def generate_full_set(section: list[str]) -> set:
     return set(range(int(section[0]), int(section[1]) +1 ))
 
 
-def get_overlap(assignment_pairs: list[str]) -> tuple[int]:
+def get_overlap(assignment_pairs: list[str]) -> tuple[int, int]:
     fully_contained = 0
     overlapping = 0
     for assignment_pair in assignment_pairs:

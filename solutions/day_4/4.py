@@ -3,7 +3,7 @@ def load_data() -> list[str]:
         return file.read().split('\n')
 
 
-def get_overlap(assignment_pairs: list[str]) -> tuple[int]:
+def get_overlap(assignment_pairs: list[str]) -> tuple[int, int]:
     fully_contained = 0
     overlapping = 0
     for pair in assignment_pairs:
