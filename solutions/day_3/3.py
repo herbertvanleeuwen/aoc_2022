@@ -1,6 +1,6 @@
 def load_data():
     with open("data/input_day3.txt") as file:
-        return file.read().split('\n')
+        return file.read().split("\n")
 
 
 def generate_priority(item: str) -> int:
@@ -41,11 +41,13 @@ def get_group_badge(group: list[str]):
 
 
 def sum_of_badges(rugsacks: list[str], number_of_elfs_per_group: int = 3) -> int:
-    return sum(generate_priority(get_group_badge(rugsacks[i : i + number_of_elfs_per_group])) 
-               for i in range(0, len(rugsacks), number_of_elfs_per_group))
+    return sum(
+        generate_priority(get_group_badge(rugsacks[i : i + number_of_elfs_per_group]))
+        for i in range(0, len(rugsacks), number_of_elfs_per_group)
+    )
 
 
 if __name__ == "__main__":
     rugsacks = load_data()
-    print(f'Sum of priority for misplaced items {sum_of_misplaced_items(rugsacks)}')
-    print(f'Sum of priority of group badges {sum_of_badges(rugsacks)}')
+    print(f"Sum of priority for misplaced items {sum_of_misplaced_items(rugsacks)}")
+    print(f"Sum of priority of group badges {sum_of_badges(rugsacks)}")
