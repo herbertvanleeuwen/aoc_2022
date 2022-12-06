@@ -9,8 +9,9 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "ms-python.python"
-            ],
+				"ms-python.python",
+				"njpwerner.autodocstring"
+			],
             "settings": {
                 "python.testing.pytestArgs": [
                     "."

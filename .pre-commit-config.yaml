@@ -9,5 +9,6 @@ repos:
     rev: 22.3.0
     hooks:
     -   id: black
+        exclude: "^data/"
         args: # arguments to configure black
         - --line-length=120
