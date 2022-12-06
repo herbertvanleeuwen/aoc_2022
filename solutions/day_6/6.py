@@ -1,12 +1,13 @@
-def load_data():
+def load_data() -> list[str]:
     with open("data/input_day6.txt", "r") as f:
         return [letter for letter in f.read().strip()]
 
 
-def data_stream_processing(data_stream, nr_unique):
+def data_stream_processing(data_stream: list[str], nr_unique: int) -> int:
     for char_ix in range(0, len(data_stream) + 1):
         if len(set(data_stream[char_ix : char_ix + nr_unique])) == len((data_stream[char_ix : char_ix + nr_unique])):
             return char_ix + nr_unique
+    raise Exception("Starting string not found")
 
 
 if __name__ == "__main__":
