@@ -6,6 +6,7 @@ repos:
     -   id: end-of-file-fixer
         exclude: "^data/"
     -   id: trailing-whitespace
+    -   id: requirements-txt-fixer
 -   repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
